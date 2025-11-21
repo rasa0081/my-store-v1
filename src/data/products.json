@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Mastering Next.js 14: Advanced Web Development",
+      "category": "TECH",
+      "price": 49.99,
+      "image": "/images/next14.jpg",
+      "description": "Take your web development skills to the next level with our Mastering Next.js 14 course. Dive deep into the latest features and functionalities of Next.js, including server-side rendering, API routes, and dynamic routing.",
+      "delivery": "Eligible For Instant Delivery"
+    },
+    {
+      "id": "2",
+      "name": "Complete Python Programming",
+      "category": "TECH",
+      "price": 19.99,
+      "image": "/images/python.jpg",
+      "description": "Learn Python programming from scratch with this comprehensive course covering all fundamental concepts.",
+      "delivery": "Eligible For Instant Delivery"
+    },
+    {
+      "id": "3",
+      "name": "Machine Learning for Beginners: A Practical Guide",
+      "category": "TECH",
+      "price": 29.99,
+      "image": "/images/ml.jpg",
+      "description": "Start your machine learning journey with hands-on projects and real-world applications.",
+      "delivery": "Eligible For Instant Delivery"
+    },
+    {
+      "id": "4",
+      "name": "Web Development Bootcamp: Build Modern Websites",
+      "category": "TECH",
+      "price": 39.99,
+      "image": "/images/webdev.jpg",
+      "description": "Become a full-stack web developer by building modern websites and applications.",
+      "delivery": "Eligible For Instant Delivery"
+    },
+    {
+      "id": "5",
+      "name": "Digital Marketing Fundamentals",
+      "category": "MARKETING",
+      "price": 14.99,
+      "image": "/images/digital-marketing.jpg",
+      "description": "Learn the core principles of digital marketing and how to apply them effectively.",
+      "delivery": "Eligible For Instant Delivery"
+    },
+    {
+      "id": "6",
+      "name": "Ethical Hacking & Cybersecurity",
+      "category": "SECURITY",
+      "price": 24.99,
+      "image": "/images/cybersecurity.jpg",
+      "description": "Explore the world of ethical hacking and learn how to protect systems from cyber threats.",
+      "delivery": "Eligible For Instant Delivery"
+    },
+    {
+      "id": "7",
+      "name": "Email Marketing Mastery: Convert Leads to Customers",
+      "category": "MARKETING",
+      "price": 24.99,
+      "image": "/images/email-marketing.jpg",
+      "description": "Master email marketing strategies to convert leads into loyal customers.",
+      "delivery": "Eligible For Instant Delivery"
+    },
+    {
+      "id": "8",
+      "name": "Cybersecurity Fundamentals: Protect Your Digital Assets",
+      "category": "SECURITY",
+      "price": 19.99,
+      "image": "/images/cyber-fundamentals.jpg",
+      "description": "Learn the fundamentals of cybersecurity to protect your digital assets effectively.",
+      "delivery": "Eligible For Instant Delivery"
+    }
+  ]
+}
