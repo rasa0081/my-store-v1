@@ -1,5 +1,5 @@
-import AdminLayout from '../../../components/admin/AdminLayout';
-import AuthGuard from '../../../components/auth/AuthGuard';
+import AdminLayout from '../../components/admin/AdminLayout';
+import AuthGuard from '../../components/auth/AuthGuard';
 
 export const metadata = {
   title: 'Admin Dashboard - Digital Store',
@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <AuthGuard requireAdmin>
+    <AuthGuard requireAdmin redirectTo="/admin/auth/login">
       <AdminLayout>{children}</AdminLayout>
     </AuthGuard>
   );

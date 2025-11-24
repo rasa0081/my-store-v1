@@ -9,7 +9,12 @@ import {
   Container 
 } from '@mui/material';
 
-export default function AuthGuard({ children, requireAuth = false, requireAdmin = false }) {
+export default function AuthGuard({ 
+  children, 
+  requireAuth = false, 
+  requireAdmin = false, 
+  redirectTo = '/auth/login' 
+}) {
   const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState(null);
   const router = useRouter();
@@ -26,20 +31,22 @@ export default function AuthGuard({ children, requireAuth = false, requireAdmin 
         const data = await response.json();
         setUser(data.user);
         
+        // Check admin requirements
         if (requireAdmin && data.user.role !== 'admin') {
-          router.push('/');
+          router.push(redirectTo);
           return;
         }
       } else {
-        if (requireAuth) {
-          router.push(`/auth/login?redirect=${encodeURIComponent(pathname)}`);
+        // Not authenticated
+        if (requireAuth || requireAdmin) {
+          router.push(`${redirectTo}?redirect=${encodeURIComponent(pathname)}`);
           return;
         }
       }
     } catch (error) {
       console.error('Auth check failed:', error);
-      if (requireAuth) {
-        router.push('/auth/login');
+      if (requireAuth || requireAdmin) {
+        router.push(redirectTo);
       }
     } finally {
       setIsLoading(false);
@@ -70,7 +77,7 @@ export default function AuthGuard({ children, requireAuth = false, requireAdmin 
         </Typography>
         <Button 
           variant="contained" 
-          onClick={() => router.push('/auth/login')}
+          onClick={() => router.push(redirectTo)}
           sx={{ mt: 2 }}
         >
           Go to Login
